@@ -1,0 +1,7 @@
+name: 'OEmbed thumbnails improvement'
+type: module
+description: 'Replace the OEmbed thumbnails downloaded to provide better quality.'
+core_version_requirement: '^8.8 || ^9'
+package: Catch
+dependencies:
+  - language

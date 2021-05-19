@@ -1,0 +1,7 @@
+services:
+  oembed_thumbnails.oembed_fetcher_decorator:
+    class: Drupal\oembed_thumbnails\OEmbed\ResourceFetcherDecorator
+    public: true
+    decorates: media.oembed.resource_fetcher
+    decoration_priority: 4
+    arguments: ['@oembed_thumbnails.oembed_fetcher_decorator.inner', '@http_client', '@media.oembed.provider_repository', '@cache.default']

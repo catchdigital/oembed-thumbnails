@@ -1,0 +1,22 @@
+{
+    "name": "catchdigital/oembed-thumbnails",
+    "description": "Replace the OEmbed thumbnails downloaded to provide better quality.",
+    "type": "drupal-module",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Alberto Contreras",
+            "email": "a.contreras@catchdigital.com"
+        }
+    ],
+    "repositories": [
+      {
+        "type": "git",
+        "url": "https://github.com/catchdigital/oembed-thumbnails"
+      }
+    ],
+    "post-install-cmd": [],
+    "post-update-cmd": [],
+    "require": {}
+}

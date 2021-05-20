@@ -57,10 +57,17 @@ class ResourceFetcherDecorator implements ResourceFetcherInterface  {
           break;
       }
 
+      // If thumbnail doesn't exists, return original object.
+      $headers = get_headers($thumbnail_uri);
+      if (strpos($headers[0], '404 Not Found') > 0) {
+        return $data;
+      }
+
       // Get size of new image.
       $thumb_size = getimagesize($thumbnail_uri);
       $thumbnail_width = $thumb_size[0];
       $thumbnail_height = $thumb_size[1];
+
       // Create a new object with new thumbnails.
       $data = Resource::video(
         $data->getHtml(),
